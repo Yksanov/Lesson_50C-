@@ -45,7 +45,7 @@ namespace WebApplication2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Phones");
+                    b.ToTable("Animals");
                 });
 #pragma warning restore 612, 618
         }
