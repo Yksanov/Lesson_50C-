@@ -1,0 +1,40 @@
+@model List<Animal>
+
+@{
+    ViewBag.Title = "All Animals";
+}
+
+<h2>All Animals to ZooStore</h2>
+<p><a asp-action="Create">Add new Animal</a></p>
+@if (Model != null && Model.Count != 0)
+{
+    <table class="table-success">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Type</th>
+            <th scope="col">Color</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <th scope="row">@a.Name</th>
+                <td>@a.Age</td>
+                <td>@a.Type</td>
+                <td>@a.Color</td>
+                <td>@a.Weight</td>
+                <td>@a.Price</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <h3>Animals not found</h3>
+}
