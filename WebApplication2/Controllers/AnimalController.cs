@@ -36,4 +36,12 @@ public class AnimalController : Controller
 
         return View(animal);
     }
+
+    [HttpGet]
+    public IActionResult Details(int id)
+    {
+        List<Animal> animal = _context.Animals.ToList();
+        animal.Where(e => e.Id == id);
+        return View();
+    }
 }

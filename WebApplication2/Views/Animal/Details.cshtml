@@ -1,11 +1,9 @@
 @model List<Animal>
-
 @{
-    ViewBag.Title = "All Animals";
+    ViewBag.Title = "Details";
 }
 
-<h2>All Animals to ZooStore</h2>
-<p><a asp-action="Create">Add new Animal</a></p>
+<h2>Show Animal</h2>
 @if (Model != null && Model.Count != 0)
 {
     <table class="table table-success">

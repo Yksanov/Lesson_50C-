@@ -1,3 +1,6 @@
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
 namespace WebApplication2.Models;
 
 public class Animal
@@ -9,4 +12,7 @@ public class Animal
     public string Color { get; set; }
     public double Weight { get; set; }
     public int Price { get; set; }
+    
+    [DisplayName("Upload Image")]
+    public string Image { get; set; }
 }
