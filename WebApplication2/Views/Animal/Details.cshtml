@@ -6,35 +6,25 @@
 <h2>Show Animal</h2>
 @if (Model != null && Model.Count != 0)
 {
-    <table class="table table-success">
-        <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Type</th>
-            <th scope="col">Color</th>
-            <th scope="col">Weight</th>
-            <th scope="col">Price</th>
-            <th score="col">Image</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach (var a in Model)
-        {
-            <tr>
-                <th scope="row">@a.Id</th>
-                <th>@a.Name</th>
-                <td>@a.Age</td>
-                <td>@a.Type</td>
-                <td>@a.Color</td>
-                <td>@a.Weight</td>
-                <td>@a.Price</td>
-                <td>@a.Image</td>
-            </tr>
-        }
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-6">
+            <img src="@Model[0].Image" alt="image"/>
+        </div>
+        <div class="col-6">
+            @foreach (var e in Model)
+            {
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>ID: </strong>@e.Id</li>
+                    <li class="list-group-item"><strong>Name: </strong>@e.Name</li>
+                    <li class="list-group-item"><strong>Surname: </strong>@e.Age</li>
+                    <li class="list-group-item"><strong>About: </strong>@e.Type</li>
+                    <li class="list-group-item"><strong>Age: </strong>@e.Color</li>
+                    <li class="list-group-item"><strong>About: </strong>@e.Weight</li>
+                    <li class="list-group-item"><strong>Age: </strong>@e.Price</li>
+                </ul>
+            }
+        </div>
+    </div>
 }
 else
 {
