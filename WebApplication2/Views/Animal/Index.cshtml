@@ -17,6 +17,7 @@
             <th scope="col">Color</th>
             <th scope="col">Weight</th>
             <th scope="col">Price</th>
+            <th scope="col">Image</th>
         </tr>
         </thead>
         <tbody>
@@ -29,7 +30,8 @@
                 <td>@a.Color</td>
                 <td>@a.Weight</td>
                 <td>@a.Price</td>
-                <td><a asp-action="Details">Details</a></td>
+                <td>@a.Image</td>
+                <td><a asp-action="Details" asp-route-id="@a.Id">Details</a></td>
             </tr>
         }
         </tbody>

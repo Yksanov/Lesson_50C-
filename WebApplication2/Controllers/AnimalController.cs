@@ -41,7 +41,7 @@ public class AnimalController : Controller
     public IActionResult Details(int id)
     {
         List<Animal> animal = _context.Animals.ToList();
-        animal.Where(e => e.Id == id);
-        return View();
+        var finId = animal.FindAll(e => e.Id == id);
+        return View(finId);
     }
 }
